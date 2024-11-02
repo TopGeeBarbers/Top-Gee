@@ -35,3 +35,8 @@ $(function() {
         });
     });
 });
+// Set the minimum date for the appointment date input to today
+    document.addEventListener("DOMContentLoaded", function() {
+        var today = new Date().toISOString().split("T")[0];
+        document.getElementById("appointment_date").setAttribute("min", today);
+    });
