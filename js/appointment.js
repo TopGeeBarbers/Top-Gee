@@ -4,6 +4,19 @@
         var subscribeCheckbox = $('#subscribe');
         var alreadySubscribedCheckbox = $('#already_subscribed');
 
+        // Prevent both checkboxes from being selected simultaneously
+        subscribeCheckbox.on('change', function() {
+            if (subscribeCheckbox.is(':checked')) {
+                alreadySubscribedCheckbox.prop('checked', false);
+            }
+        });
+
+        alreadySubscribedCheckbox.on('change', function() {
+            if (alreadySubscribedCheckbox.is(':checked')) {
+                subscribeCheckbox.prop('checked', false);
+            }
+        });
+
         form.submit(function(event) {
             event.preventDefault(); // Prevent the default form submission
 
