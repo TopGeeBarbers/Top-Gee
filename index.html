@@ -302,43 +302,47 @@
         <div class="row">
             <div class="col-md-6 offset-md-6">
                 <form action="https://docs.google.com/forms/d/e/1FAIpQLScx2NXHYMJ1zdwcnII6Gzo0sdgOweFq3wi8xfXTvEvuIV5utg/formResponse"
-                    method="post" id="appointment_form" class="form-horizontal appointment_form">
+                      method="post" id="appointment_form" class="form-horizontal appointment_form">
                     <div class="book_content">
                         <h2>Make an Appointment</h2>
                         <p>Barber is a person whose occupation is mainly to cut, dress, groom, style, and shave men's and boys' hair.</p>
                     </div>
                     <div class="form-group row">
                         <div class="col-md-6 padding-10">
-                            <input type="text" name="entry.553662084" class="form-control" placeholder="Name" required>
+                            <input type="text" name="entry.553662084" id="app_name" class="form-control" placeholder="Name" required>
                         </div>
                         <div class="col-md-6 padding-10">
-                            <input type="email" name="entry.172983067" class="form-control" placeholder="Your Email" required>
+                            <input type="email" name="entry.172983067" id="email_field" class="form-control" placeholder="Your Email" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-md-6 padding-10">
-                            <input type="text" name="entry.1191951174" class="form-control" placeholder="Your Phone No" required>
+                            <input type="text" name="entry.1191951174" id="app_phone" class="form-control" placeholder="Your Phone No" required>
                         </div>
                         <div class="col-md-6 padding-10">
-    <label for="appointment_date" class="form-label">Enter Appointment Date</label>
-    <input type="date" name="entry.1137254861" class="form-control" id="appointment_date" required>
-</div>
-
+                            <label for="appointment_date" class="form-label">Enter Appointment Date</label>
+                            <input type="date" name="entry.1137254861" class="form-control" id="appointment_date" required>
+                        </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-md-6 padding-10">
-                            <input type="text" name="entry.32146182" class="form-control" placeholder="Enter Appointment Time" required>
+                            <input type="text" name="entry.32146182" id="app_free_time" class="form-control" placeholder="Enter Appointment Time" required>
                         </div>
                         <div class="col-md-6 padding-10">
-                            <select class="form-control" name="entry.820013784">
+                            <select class="form-control" name="entry.820013784" id="app_services">
                                 <option value="" disabled selected>Services</option>
                                 <option>Hair Styling / Cutting</option>
                                 <option>Shaving</option>
-                               <option>Hot Towel</option>
+                                <option>Hot Towel</option>
                                 <option>Beard Trimming</option>
                                 <option>Full Service</option>
-
                             </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12 padding-10">
+                            <input type="checkbox" id="subscribe" name="subscribe"> <label for="subscribe">Subscribe</label>
+                            <input type="checkbox" id="already_subscribed" name="already_subscribed"> <label for="already_subscribed">Already Subscribed</label>
                         </div>
                     </div>
                     <button id="app_submit" class="default_btn" type="submit">Make Appointment</button>
